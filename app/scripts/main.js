@@ -8,7 +8,7 @@ if(localStorage.getItem('body_text')) {
   $('#body_text').val(localStorage.getItem('body_text'));
 }
 if(localStorage.getItem('time')) {
-  if (localStorage.getItem('time') !== 0) {
+  if (localStorage.getItem('time') != 0) {
     calculateTimeDiff(localStorage.getItem('time'));
   }
 }
@@ -22,7 +22,7 @@ $('#datepicker').datetimepicker({
 	timeFormat: 'hh:mm tt',
   minDate: 0,
   onClose: function(){
-      if ($('#datepicker').val() !== '') {
+      if ($('#datepicker').val() != '') {
           clearInterval(interval);
           $('#datepicker').hide();
           calculateTimeDiff( ($('#datepicker').datetimepicker( 'getDate').getTime()));
@@ -59,7 +59,7 @@ function showTime(sec) {
         secText = '0';
     }
 
-    if (timeReminding !== 0) {
+    if (timeReminding != 0) {
       secText = secText + sec;
       minTxt = minTxt + min;
       hourTxt = hourTxt + hours;
@@ -74,12 +74,6 @@ function showTime(sec) {
         $('.days').css({'width': '25%'});
         $('.time_box').css({'width': '25%'});
       }
-
-
-
-      // TODO: Move project to my github files
-      // TODO: Clean the HTML and CSS files
-
 
       $('#days').text(dayText);
       $('#hours').text(hourTxt);
