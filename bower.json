@@ -1,0 +1,14 @@
+{
+  "name": "countdown",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery-ui": "~1.11.4",
+    "jqueryui-timepicker-addon": "~1.6.1",
+    "jquery-ui-slider": "*"
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}

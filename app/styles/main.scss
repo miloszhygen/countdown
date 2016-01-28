@@ -1,0 +1,118 @@
+$font_color:#F1F1ED;
+$main_bg: #476074;
+$upper_bg:#1A4359;
+$lower_bg:#476074;
+
+$timer_box_w:80%;
+
+body {
+  background: $main_bg;
+  color: #333;
+  margin: 0;
+}
+
+#datepicker{
+  height: 50px;
+  width: 90%;
+  font-size: 2em;
+}
+
+#logo{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+#upper{
+    height:  600px;
+    width: 100%;
+    background-color: $upper_bg;
+    position: relative;
+
+    #timerBox{
+      font-family: 'Roboto-Light';
+      border-top: 1px solid $font_color;
+      border-bottom: 1px solid $font_color;
+      background-color: $upper_bg;
+      width:$timer_box_w;
+      height: 12vw;
+      overflow: hidden;;
+      margin: auto;
+      position: absolute;
+      padding-top: 4px;
+      top: 0; left: 0; bottom: 0; right: 0;
+
+      #datepicker{
+        width: 100%;
+        height: 100%;
+      }
+
+      .time_box{
+          width: 25%;
+          height: 100%;
+          float: left;
+
+          .time_box_count{
+              float: left;
+              font-size: 10vw;
+              height: 100%;
+              color: $font_color;
+          }
+          .time_box_txt{
+              float: left;
+              font-size: 5.5vw;
+              height: 100%;
+              padding-top: 4.3vw;
+              color: $font_color;
+            }
+        }
+    }
+}
+
+
+#lower{
+    padding-top: 90px;
+    width: 80%;
+    background-color: $lower_bg;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+
+    #header_text{
+      background-color: $lower_bg;
+      height: 50px;
+      width: 100%;
+      border-bottom: 1px solid $font_color;
+      overflow: hidden;
+      font-size: 3em;;
+      padding-bottom: 20px;
+    }
+
+    #body_text{
+      padding-top: 20px;
+      width: 100%;
+      height: 400px;
+      background-color: $lower_bg;
+      overflow: hidden;
+    }
+
+    .input-text{
+      font-family: 'Roboto-Light';
+      font-size: 2em;
+      color: $font_color;
+
+    }
+}
+
+.clearFormatInput{
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  padding: 0;
+}
