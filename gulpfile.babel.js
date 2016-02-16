@@ -106,17 +106,17 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     }
   });
 
-  gulp.watch([
-    'app/*.html',
-    '.tmp/scripts/**/*.js',
-    'app/images/**/*',
-    '.tmp/fonts/**/*'
-  ]).on('change', reload);
-
-  gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch('app/fonts/**/*', ['fonts']);
-  gulp.watch('bower.json', ['wiredep', 'fonts']);
+  // gulp.watch([
+  //   'app/*.html',
+  //   '.tmp/scripts/**/*.js',
+  //   'app/images/**/*',
+  //   '.tmp/fonts/**/*'
+  // ]).on('change', reload);
+  //
+  // gulp.watch('app/styles/**/*.scss', ['styles']);
+  // gulp.watch('app/scripts/**/*.js', ['scripts']);
+  // gulp.watch('app/fonts/**/*', ['fonts']);
+  // gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
 gulp.task('serve:dist', () => {
@@ -163,7 +163,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
