@@ -27,6 +27,9 @@ $('#datepicker').datetimepicker({
           $('#datepicker').hide();
           calculateTimeDiff( ($('#datepicker').datetimepicker( 'getDate').getTime()));
       }
+  },
+  onExit: function(){
+    alert('hello')
   }
 });
 
@@ -118,6 +121,15 @@ $('#header_text').on('keyup change', function(){
 $('#body_text').on('keyup change', function(){
   var headerText = $('#body_text').val();
   localStorage.setItem('body_text', headerText);
+});
+
+
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        // <DO YOUR WORK HERE>
+        // alert('hello')
+        $('#datepicker').hide();
+    }
 });
 
 /*
