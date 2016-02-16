@@ -106,17 +106,17 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     }
   });
 
-  // gulp.watch([
-  //   'app/*.html',
-  //   '.tmp/scripts/**/*.js',
-  //   'app/images/**/*',
-  //   '.tmp/fonts/**/*'
-  // ]).on('change', reload);
-  //
-  // gulp.watch('app/styles/**/*.scss', ['styles']);
-  // gulp.watch('app/scripts/**/*.js', ['scripts']);
-  // gulp.watch('app/fonts/**/*', ['fonts']);
-  // gulp.watch('bower.json', ['wiredep', 'fonts']);
+  gulp.watch([
+    'app/*.html',
+    '.tmp/scripts/**/*.js',
+    'app/images/**/*',
+    '.tmp/fonts/**/*'
+  ]).on('change', reload);
+
+  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/fonts/**/*', ['fonts']);
+  gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
 gulp.task('serve:dist', () => {
